@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+}
+
+table,td,th{
+  border: 1px solid black;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.border-left-top-right-hidden{
+  border-left-style: hidden;
+  border-top-style: hidden;
+  border-right-style: hidden;
+}
+
+.watermark {
+  width: 1fr;
+  height: 1fr;
+  background-image: url("../public/Sample.JPG");
+  font-size: 80px;
+  opacity: 0.3;
+  color: BLACK;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  user-select: none;
+  z-index: -10;
+}
+
+
