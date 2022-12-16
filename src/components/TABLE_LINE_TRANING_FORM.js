@@ -48,11 +48,11 @@ const TABLE_LINE_TRANING_FORM = () => {
     return (
         <div className='container mx-auto mt-[80px]' >
             <Navbar />
-            <button onClick={() => { navigate(`/Manager`) }} className='fixed top-[90px] right-0 bg-[#470d67] text-[#fd8503] px-[10px]   border text-[30px]  rounded'><FontAwesomeIcon icon={faLeftLong} /></button>
+            <button onClick={() => { navigate(`/Manager`) }} className='fixed top-[90px] left-0 bg-[#470d67] text-[#fd8503] px-[10px]   border text-[30px]  rounded'><FontAwesomeIcon icon={faLeftLong} /></button>
 
             <div className="flex flex-col">
                 <div >
-                    <div className="py-3 pl-2">
+                    <div className="py-3 pl-[55px]">
                         <div className="relative ">
                             <label htmlFor="hs-table-search" className="sr-only">
                                 Search
