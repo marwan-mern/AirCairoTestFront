@@ -5,7 +5,6 @@ import {  faLeftLong } from '@fortawesome/free-solid-svg-icons'
 import Navbar from './Navbar';
 import api from '../api/items.js'
 import { useNavigate, useParams } from "react-router-dom"
-import Img from'./air-cairo.jpg'
 
 const READ_FLIGHT_DETAILS = () => {
     let { id } = useParams();
@@ -50,7 +49,7 @@ const READ_FLIGHT_DETAILS = () => {
             {Data.length > 0 && (
                 <div ref={componentRef} className='container mx-auto ' style={{ width: 21 + 'cm', height: 25.7 + 'cm' }}>
                     <div className='flex justify-center mt-[20px]'>
-                        <img alt='Air-Cairo-logo' className='w-[17%]' src={Img} />
+                        <img alt='Air-Cairo-logo' className='w-[17%]' src='/air-cairo.png' />
                     </div>
                     <table className=' text-[13px] text-start' >
                         <tbody>

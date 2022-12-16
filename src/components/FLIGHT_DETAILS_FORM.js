@@ -9,7 +9,7 @@ import { useNavigate } from "react-router-dom"
 import { toast, Zoom } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCheck,faLeftLong } from '@fortawesome/free-solid-svg-icons'
+import { faLeftLong } from '@fortawesome/free-solid-svg-icons'
 
 
 const FLIGHT_DETAILS = () => {
@@ -353,7 +353,7 @@ const FLIGHT_DETAILS = () => {
             }} className='fixed top-[110px] left-0 bg-[#470d67] text-[#fd8503] font-bold py-2 px-4 border  rounded'>Submit</button>
             <div ref={componentRef} className='container mx-auto ' style={{ width: 21 + 'cm', height: 25.7 + 'cm' }}>
                 <div className='flex justify-center mt-[20px]'>
-                    <img alt='Air-Cairo-logo' className='w-[17%]' src='./air-cairo.jpg' />
+                    <img alt='Air-Cairo-logo' className='w-[17%]' src='./air-cairo.png' />
                 </div>
                 <div className="watermark">
                     Sample For Demonstration Purposes Only

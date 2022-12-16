@@ -251,7 +251,7 @@ const LINE_TRANING_FORM = () => {
 
             <div ref={componentRef} className='container mx-auto' style={{ width: 21 + 'cm', height: 25.7 + 'cm' }}>
                 <div className='flex justify-center mt-[30px]'>
-                    <img alt='Air-Cairo-logo' className='w-[17%]' src='./air-cairo.jpg' />
+                    <img alt='Air-Cairo-logo' className='w-[17%]' src='/air-cairo.png' />
                 </div>
                 <div className="watermark">
                     Sample For Demonstration Purposes Only
