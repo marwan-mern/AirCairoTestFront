@@ -24,10 +24,10 @@ const Manager_Main = () => {
             <Navbar />
             <div>
                 <div className='flex flex-wrap justify-around items-center gap-[20px] '>
-                    <button className='w-[25%] p-[10px] text-lg font-black text-[#470d67] rounded-lg bg-[#fd8503] border-[2px] border-solid border-[#470d67]'>
+                    <button className=' p-[10px] text-lg font-black text-[#470d67] rounded-lg bg-[#fd8503] border-[2px] border-solid border-[#470d67]'>
                         <Link to={`/Table/Line`}>Line Training Form</Link>
                     </button>
-                    <button className='w-[25%] p-[10px] text-lg font-black text-[#470d67] rounded-lg bg-[#fd8503] border-[2px] border-solid border-[#470d67]'>
+                    <button className=' p-[10px] text-lg font-black text-[#470d67] rounded-lg bg-[#fd8503] border-[2px] border-solid border-[#470d67]'>
                         <Link to={`/Table/Details`}>Flight Details Form</Link>
                     </button>
                 </div>
