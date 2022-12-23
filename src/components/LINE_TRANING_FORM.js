@@ -245,16 +245,13 @@ const LINE_TRANING_FORM = () => {
     return (
         <div className='container mx-auto mt-[110px]' >
             <Navbar />
-            <button onClick={() => { Print() }} className='fixed top-[110px] right-0 bg-[#470d67] text-[#fd8503] font-bold py-2 px-4 border  rounded'>Print</button>
+            {/* <button onClick={() => { Print() }} className='fixed top-[110px] right-0 bg-[#470d67] text-[#fd8503] font-bold py-2 px-4 border  rounded'>Print</button> */}
             <button onClick={() => {navigate(`/Captin`) }} className='fixed top-[70px] left-0 bg-[#470d67] text-[#fd8503] px-[10px]   border text-[30px]  rounded'><FontAwesomeIcon icon={faLeftLong} /></button>
             <button onClick={() => setShowModal(true)} className='fixed top-[110px] left-0 bg-[#470d67] text-[#fd8503] font-bold py-2 px-4 border  rounded'>Submit</button>
 
             <div ref={componentRef} className='container mx-auto' style={{ width: 21 + 'cm', height: 25.7 + 'cm' }}>
                 <div className='flex justify-center mt-[30px]'>
                     <img alt='Air-Cairo-logo' className='w-[17%]' src='/air-cairo.png' />
-                </div>
-                <div className="watermark">
-                    Sample For Demonstration Purposes Only
                 </div>
                 <table className=' text-[13px] text-start' >
                     <tbody>

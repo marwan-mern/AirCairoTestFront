@@ -342,7 +342,7 @@ const FLIGHT_DETAILS = () => {
     return (
         <div className='container mx-auto mt-[110px]' >
             <Navbar />
-            <button onClick={() => { Print() }} className='fixed top-[110px] right-0 bg-[#470d67] text-[#fd8503] font-bold py-2 px-4 border  rounded'>Print</button>
+            {/* <button onClick={() => { Print() }} className='fixed top-[110px] right-0 bg-[#470d67] text-[#fd8503] font-bold py-2 px-4 border  rounded'>Print</button> */}
             <button onClick={() => {navigate(`/Captin`) }} className='fixed top-[70px] left-0 bg-[#470d67] text-[#fd8503] px-[10px]   border text-[30px]  rounded'><FontAwesomeIcon icon={faLeftLong} /></button>
             <button onClick={() => {
                setsignPadTraineeData(signPadTrainee.signatureValue)
@@ -354,9 +354,6 @@ const FLIGHT_DETAILS = () => {
             <div ref={componentRef} className='container mx-auto ' style={{ width: 21 + 'cm', height: 25.7 + 'cm' }}>
                 <div className='flex justify-center mt-[20px]'>
                     <img alt='Air-Cairo-logo' className='w-[17%]' src='./air-cairo.png' />
-                </div>
-                <div className="watermark">
-                    Sample For Demonstration Purposes Only
                 </div>
                 <table className=' text-[13px] text-start' >
                     <tbody>
