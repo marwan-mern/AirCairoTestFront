@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react'
 import { useReactToPrint } from 'react-to-print';
-import SignaturePad from 'react-signature-canvas'
+import SignatureCanvas from 'react-signature-canvas'
 import { SignatureComponent, Signature } from '@syncfusion/ej2-react-inputs'
 import { ButtonComponent } from '@syncfusion/ej2-react-buttons'
 import Navbar from './Navbar';
@@ -143,35 +143,34 @@ const FLIGHT_DETAILS = () => {
         handlePrint()
     }
 
-    // let signPadTrainee = useRef({})
-    // const ClearTrainee = () => {
-    //     signPadTrainee.current.clear()
-    // }
-    // let signPadIP = useRef({})
-    // const ClearIP = () => {
-    //     signPadIP.current.clear()
-    // }
-
-    // let signPadTM = useRef({})
-    // const ClearTM = () => {
-    //     signPadTM.current.save()
-    // }
-
-    let signPadTrainee = Signature || null
+    let signPadTrainee = useRef({})
     const ClearTrainee = () => {
-        signPadTrainee.clear()
+        signPadTrainee.current.clear()
     }
-    let signPadIP = Signature || null
+    let signPadIP = useRef({})
     const ClearIP = () => {
-        signPadIP.clear()
+        signPadIP.current.clear()
     }
-    let signPadTM = Signature || null
+
+    let signPadTM = useRef({})
     const ClearTM = () => {
-        signPadTM.clear()
-        // signPadTM.save()
-        console.log(signPadTM.signatureValue)
-        // console.log(signPadTM)
+        signPadTM.current.save()
     }
+
+    // let signPadTrainee = Signature || null
+    // const ClearTrainee = () => {
+    //     signPadTrainee.clear()
+    // }
+    // let signPadIP = Signature || null
+    // const ClearIP = () => {
+    //     signPadIP.clear()
+    // }
+    // let signPadTM = Signature || null
+    // const ClearTM = () => {
+    //     signPadTM.clear()
+    //     // signPadTM.save()
+    //     // console.log(signPadTM)
+    // }
 
     const ConsoleTrainee = () => {
         console.log(signPadTrainee.signatureValue)
@@ -345,9 +344,9 @@ const FLIGHT_DETAILS = () => {
             {/* <button onClick={() => { Print() }} className='fixed top-[110px] right-0 bg-[#470d67] text-[#fd8503] font-bold py-2 px-4 border  rounded'>Print</button> */}
             <button onClick={() => {navigate(`/Captin`) }} className='fixed top-[70px] left-0 bg-[#470d67] text-[#fd8503] px-[10px]   border text-[30px]  rounded'><FontAwesomeIcon icon={faLeftLong} /></button>
             <button onClick={() => {
-               setsignPadTraineeData(signPadTrainee.signatureValue)
-                setPadIPData(signPadIP.signatureValue)
-                setPadTMData(signPadTM.signatureValue)
+               setsignPadTraineeData(signPadTrainee.current.toDataURL())
+                setPadIPData(signPadIP.current.toDataURL())
+                setPadTMData(signPadTM.current.toDataURL())
 
                 setShowModal(true)
             }} className='fixed top-[110px] left-0 bg-[#470d67] text-[#fd8503] font-bold py-2 px-4 border  rounded'>Submit</button>
@@ -799,38 +798,38 @@ const FLIGHT_DETAILS = () => {
                             <p className='pl-[10px]'>Trainee</p>
                             <p className='pl-[10px] underline'>Name/Signature</p>
                             <span className='border-[1px] border-solid border-black overflow-hidden w-[250px]  h-[120px] '>
-                                {/* <SignaturePad ref={signPadTrainee} /> */}
-                                <SignatureComponent ref={sign => signPadTrainee = sign}
+                                <SignatureCanvas canvasProps={{width: 250, height: 120, className: 'sigCanvas'}} ref={signPadTrainee} />
+                                {/* <SignatureComponent ref={sign => signPadTrainee = sign}
                                     backgroundColor='white'
                                     strokeColor='black'
                                 >
-                                </SignatureComponent>
+                                </SignatureComponent> */}
                             </span>
                         </div>
                         <div className='flex flex-col'>
                             <p className='pl-[10px]'>IO/CA/EP</p>
                             <p className='pl-[10px] underline'>Name/Signature</p>
                             <span className='border-[1px] border-solid border-black overflow-hidden w-[250px]  h-[120px] '>
-                                {/* <SignaturePad ref={signPadIP} /> */}
-                                <SignatureComponent ref={sign => signPadIP = sign}
+                                <SignatureCanvas canvasProps={{width: 250, height: 120, className: 'sigCanvas'}} ref={signPadIP} />
+                                {/* <SignatureComponent ref={sign => signPadIP = sign}
                                     backgroundColor='white'
                                     strokeColor='black'
                                 >
-                                </SignatureComponent>
+                                </SignatureComponent> */}
                             </span>
                         </div>
                         <div className='flex flex-col'>
                             <p className='pl-[10px]'>Training Manager</p>
                             <p className='pl-[10px] underline'>Name/Signature</p>
                             <span className='border-[1px] border-solid border-black overflow-hidden w-[250px]  h-[120px] '>
-                                {/* <SignaturePad ref={signPadTM} /> */}
-                                <SignatureComponent ref={sign => signPadTM = sign}
+                                <SignatureCanvas canvasProps={{width: 250, height: 120, className: 'sigCanvas'}} ref={signPadTM} />
+                                {/* <SignatureComponent ref={sign => signPadTM = sign}
                                     backgroundColor='white'
                                     strokeColor='black'
                                     velocity={1}
                                     maxStrokeWidth={1}
                                 >
-                                </SignatureComponent>
+                                </SignatureComponent> */}
                                 {/* <img className='w-[250px]  h-[120px]'
                                  src='data:image/png;base64,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'
                                  /> */}
