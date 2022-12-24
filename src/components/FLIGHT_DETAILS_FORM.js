@@ -154,7 +154,7 @@ const FLIGHT_DETAILS = () => {
 
     let signPadTM = useRef({})
     const ClearTM = () => {
-        signPadTM.current.save()
+        signPadTM.current.clear()
     }
 
     // let signPadTrainee = Signature || null
